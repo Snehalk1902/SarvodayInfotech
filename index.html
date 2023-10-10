@@ -1,1 +1,307 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sarvoday Infotech</title>
+
+
+	<link rel="stylesheet" type="text/css" href="css/index/index.css">
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/x-icon" href="resources/common/favicon.ico">
+
+	<!-- libs include -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" type="text/css" href="css/lib/element_ui/element_ui_default.css">
+	<link rel="stylesheet" type="text/css" href="css/lib/element_ui/element_ui_display.css">
+	<link rel="stylesheet" type="text/css" href="css/lib/owl_carousel/owl.carousel.min.css">
+	<!-- common css includes -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/fonts/fonts.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- libs js includes -->
+	<script type="text/javascript" src="js/lib/jQuery/jQuery.min.js"></script>
+	<script type="text/javascript" src="js/lib/vue/vue.js"></script>
+	<script type="text/javascript" src="js/lib/element_ui/element_ui.js"></script>
+	<script type="text/javascript" src="js/lib/owl_carousel/owl.carousel.js"></script>
+</head>
+<body >
+	<el-row id="mainApp" class="ht-100">
+        <el-container>
+			<el-header class="ht-auto main-header" id="home">
+				<el-row>
+					<el-container>
+						<el-header>
+							<el-row type="flex">
+								<el-col :span="12" class="d-flex align-items-center justify-content-center" style="margin-right: 20px;">
+									<div >Sarvoday Infotech</div>
+									<!-- <img src="./img/logo.jpeg" alt="Girl in a jacket" width="100" height="50"> -->
+								</el-col>
+								<el-col :span="12"  style="margin-right:60px;">
+									<el-row type="flex">
+										<!-- <el-col :span="24" class="header-time-section">
+											<el-row class="header-time-row-section" type="flex">
+												<el-col :span="6" class="d-flex align-items-center">
+													 <span class="font-size-35 color-white material-symbols-outlined">
+														schedule
+													</span> 
+												</el-col>
+												<el-col :span="18">
+													 <span class="color-white font-size-14">Monday-Friday</span>
+													<div class="color-white font-size-14" style="margin-top: 3px;">8:00AM-8.00PM </div> 
+												</el-col>
+											</el-row>
+										</el-col> -->
+										<!-- <el-col :span="24" class="header-contact-section">
+											<el-row class="header-contact-row-section" type="flex">
+												<el-col :span="4">
+													 <span class="font-size-35 color-white material-symbols-outlined">
+														call
+													</span> 
+												</el-col>
+												<el-col :span="24">
+													<span class="color-white font-size-14">Call Us</span>
+													<div class="color-white font-size-14" style="margin-top: 3px;">+91 9579896926</div>
+												</el-col>
+											</el-row>
+										</el-col> -->
+										<el-col :span="24" class="d-flex justify-content-end header-socialmedia-icon-section">
+											
+											<div class="social-media-icons mr d-flex align-items-center justify-content-center" v-for="item in social_media_array">
+												<i :class="item" class="color-light-green" style="font-size: 18px;"></i>
+											</div>
+										</el-col>
+									</el-row>
+								</el-col>
+							</el-row>
+						</el-header>
+						<el-header>
+							<el-row class="ht-100 wt-100 nav-bar-row-section">
+								<el-col :span="24" class="ht-100 d-flex align-items-center nav-bar-parent-section">
+
+									<div v-for="(item,index) in narbar_array" class="pr-pl-10">
+										<a class="nav-link" :href="'#'+item.id">{{item.name}}</a>
+									</div>
+									
+								</el-col>
+								<!-- <el-col :span="4" class="get-certificate-section ht-100 d-flex align-item-center">
+									<div class="color-white">Get certificate</div>
+								</el-col> -->
+							</el-row>
+
+						</el-header>
+						<el-main>
+							<el-row>
+								<el-col :span="24" class="hearder-info">
+									<h3 class="color-white">WELCOME TO SARVODAY INFOTECH</h3>
+									<h1 class="color-white">Get Better Experience With Us</h1>
+									<p class="color-white">Empowering Digital Excellence Through Software, Web, and Design.</p>
+									<!-- <div>
+										<el-button class="get-start-btn light-green">
+											GET STARTED NOW!
+										</el-button>
+										<el-button class="view-btn">
+											VIEW COURSE
+										</el-button>
+									</div> -->
+								</el-col>
+							</el-row>
+						</el-main>
+					</el-container>
+				</el-row>
+			</el-header>
+			<el-main>
+				<el-row id="home" class="ht-100 wt-100">
+					<el-col :span="24" class="ht-100">
+						<el-container class="mt-20">
+							<el-header height="30px">
+								<h1 class="m-0 color-light-green text-align-center" style="font-size: 20px;">HOME</h1>
+							</el-header>
+							<el-main>
+								<el-row class="ht-100 wt-100">
+									<el-col class="ht-100">
+                                        <el-carousel indicator-position="outside" trigger="click" type="card" :autoplay="false">
+											<el-carousel-item v-for="item in carousalarray" class ="d-flex align-items-center justify-content-center">
+											<img :src="item.img" alt="Girl in a jacket" width="100%" height="100%"> 
+											</el-carousel-item>
+										</el-carousel>
+									</el-col>
+								</el-row>
+								<el-row class="ht-100 wt-100">
+									<el-col class="ht-100" style="margin-bottom: 20px; padding:10px;">
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;Welcome to Sarvoday Infotech, where digital excellence meets innovation. Established just two years ago, we've quickly risen to prominence as a leading digital agency, dedicated to delivering exceptional freelancing services. Our journey is rooted in a powerful idea: to empower businesses by connecting them with top-tier freelancers, each a master of their domain.</p>
+										<p> &nbsp;&nbsp;&nbsp;&nbsp;What sets us apart is our commitment to being more than just a freelance platform. We're a comprehensive digital agency, offering tailored solutions that recognize the uniqueness of every project. At Sarvoday Infotech, we put client satisfaction at the forefront of our values, ensuring unwavering support and transparent communication throughout.
+											Our team boasts a diverse pool of talent, from web designers and content creators to digital marketers and developers, bringing you the best in the industry. In just two years, we've successfully delivered countless projects, earning trust and establishing ourselves as a symbol of excellence.</p>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;Explore our diverse array of services, including web development, content creation, digital marketing, e-commerce solutions, and expert consulting. Our mission revolves around empowering businesses, entrepreneurs, and freelancers, envisioning a digital realm where creativity thrives, businesses flourish, and dreams come true.
+											Join us on this remarkable expedition, whether you're a freelancer aspiring to join our network of accomplished professionals or a client in pursuit of top-tier freelancing services. Sarvoday Infotech extends a warm invitation to be a part of our journey as we continue to redefine the freelance landscape.</p>
+									</el-col>
+								</el-row>
+							</el-main>
+						</el-container>
+					</el-col>
+				</el-row>
+				<el-row id="about" class="ht-100 wt-100">
+					<el-col :span="24" class="ht-100">
+						<el-container class="mt-20">
+							<el-header height="30px">
+								<h1 class="m-0 color-light-green text-align-center" style="font-size: 20px;">ABOUT US</h1>
+							</el-header>
+							<el-main>
+                                <h2>Welcome to Sarvoday Infotech - Your Partner in Digital Excellence</h2>
+								<h3>Our Journey:</h3>
+								    <p style="font-size: 14px;line-height: 1.5rem;color: gray;">Sarvoday Infotech, established two years ago, has rapidly evolved into a prominent digital agency dedicated to delivering exceptional freelancing services. Our inception marked the beginning of a journey driven by a simple yet powerful idea: to uplift businesses by connecting them with top-tier freelancers who excel in their respective domains.</p>
+								<h3>Our Unique Identity:</h3>
+									<p style="font-size: 14px;line-height: 1.5rem;color: gray;">At Sarvoday Infotech, we take pride in being more than just another freelance platform. We are a comprehensive digital agency committed to providing outstanding results to our clients. Here's what distinguishes us:</p>
+									<p style="font-size: 14px;line-height: 1.5rem;color: gray;"> 1. A Pool of Talent: Our team comprises a diverse range of freelancers, meticulously selected for their exceptional skills. From web designers and content creators to digital marketers and developers, we bring you the best.</p>
+									<p style="font-size: 14px;line-height: 1.5rem;color: gray;"> 2. Tailored Solutions: Recognizing the individuality of each project, we collaborate closely with clients to craft bespoke solutions that align with their specific needs and objectives.</p>
+									<p style="font-size: 14px;line-height: 1.5rem;color: gray;"> 3. Client-Centric Approach: Client satisfaction sits at the core of our values. We offer unwavering support and maintain transparent communication throughout every project.</p>
+									<p style="font-size: 14px;line-height: 1.5rem;color: gray;"> 4. Two Years of Excellence: In just two years, we've successfully delivered countless projects, earning our clients' trust and establishing ourselves as a symbol of excellence in the industry.</p>
+								<h3>Our Freelancing Services:</h3>
+									<p style="font-size: 14px;line-height: 1.5rem;color: gray;">Explore the diverse array of services we offer at Sarvoday Infotech:</p>
+									<p style="font-size: 14px;line-height: 1.5rem;color: gray;"> - Web Development: Craft captivating websites and web applications that captivate and convert visitors.</p>
+									<p style="font-size: 14px;line-height: 1.5rem;color: gray;"> - Content Creation: Create engaging content that resonates with your target audience and conveys your brand's story effectively.</p>
+									<p style="font-size: 14px;line-height: 1.5rem;color: gray;"> - Digital Marketing: Elevate your online presence with results-driven digital marketing strategies tailored to your business objectives.</p>
+									<p style="font-size: 14px;line-height: 1.5rem;color: gray;"> - E-commerce Solutions: Launch and optimize your online store for maximum profitability and market reach.</p>
+									<P style="font-size: 14px;line-height: 1.5rem;color: gray;"> - Consulting: Benefit from invaluable insights and guidance provided by industry experts to steer your business in the right direction.</P>
+								<h3>Our Mission:</h3>
+									<p style="font-size: 14px;line-height: 1.5rem;color: gray;"> Our mission revolves around empowering businesses, entrepreneurs, and freelancers alike. We champion collaboration and seek to unite talent with opportunities, envisioning a digital realm where creativity thrives, businesses flourish, and dreams come to fruition.</p>
+								<h3>Join Us on This Remarkable Expedition</h3>	
+								<p style="font-size: 14px;line-height: 1.5rem;color: gray;">Whether you're a freelancer aspiring to join our network of accomplished professionals or a client in pursuit of top-tier freelancing services, Sarvoday Infotech extends a warm invitation. Join us on this remarkable expedition as we continue to redefine the freelance landscape.</p>
+								<p style="font-size: 14px;line-height: 1.5rem;color: gray;">Feel free to customize and embellish this content to suit your company's specific achievements, services, and mission. Incorporating visuals, client testimonials, and contact information will further enhance your "About Us" page on the Sarvoday Infotech website.</p>
+					        </el-main>
+						</el-container>
+					</el-col>
+				</el-row>
+				<el-row id="services" class="mt-20">
+					<el-container class="mt-20">
+						<el-header height="30px">
+							<h1 class="m-0 color-light-green text-align-center" style="font-size: 20px;">OUR SERVICES</h1>
+						</el-header>
+						<el-header class="mb-20">
+							<h2 style="font-size: 1.8rem;line-height: 1.4;" class="m-0 text-align-center">Explore Our Services</h2>
+						</el-header>
+						<el-main>
+							<el-row >
+								<el-col :span="24" v-for="(item , index) in aboutServicesArray" class="mt-10" style="background-color: white;padding: 10px 20px;">
+									<el-col :span="0" class="ht-100 d-flex align-item-center justify-content-center color-light-green" >
+										<!-- <span class=" material-symbols-outlined" style="font-size: 35px !important;">
+											{{item.icon}}
+										</span> -->
+									</el-col>
+									<el-col :span="24">
+										<!-- <span class="">{{item.name}}</span>
+										<div class="mt-10 content-dec">{{item.dec}}</div> -->
+										 <el-collapse v-model="activeNames" @change="handleChange" accordion>
+											<el-collapse-item :title="item.name" :name="index">
+												<div class="mt-10 content-dec">{{item.dec}}</div>
+											</el-collapse-item>
+										  </el-collapse>
+									</el-col>
+								</el-col>
+							</el-row>
+						</el-main>
+					</el-container>
+				</el-row>
+				<el-row id="contact" class>
+					<el-col :span="24" class="ht-100 wt-100 d-flex align-item-center justify-content-center">
+						<el-container class="mt-20">
+							<el-header height="30px">
+								<h1 class="m-0 color-light-green text-align-center" style="font-size: 20px;">CONTACT</h1>
+							</el-header>
+							<el-main style="overflow: hidden;" class="m-0">
+								<el-row class="ht-100 wt-100 d-flex align-items-center justify-content-center" style="margin:20px;">
+									<el-col :span="12" class=" ht-100 wt-100 d-flex justify-content-center align-items-center" >
+										<img src="./img/logo.jpeg" alt="Girl in a jacket" width="350" height="200">
+									</el-col>
+									<el-col :span="12" styel="background-color: white;">
+										<el-row type="flex" class="ht-100"  style="flex-direction: column;">
+											<el-col :span="24" v-for="(item) in aboutContactArray" class="mt-10 " style="padding: 10px 20px;">
+												<el-col :span="4" class="ht-100 d-flex align-item-center justify-content-center color-light-green" >
+													<span class=" material-symbols-outlined" style="font-size: 25px !important;">
+														{{item.icon}}
+													</span>
+												</el-col>
+												<el-col :span="20">
+													<a class="">{{item.name}}</a>
+												</el-col>
+											</el-col>
+										</el-row>
+									</el-col>
+								</el-row>
+							</el-main>
+							<el-footer>
+								<el-row class=" ht-100 wt-100 d-flex align-items-center justify-content-center">
+                                    <el-button type="primary" @click="contactUsDialogBox = true">Contact Us</el-button>
+										<el-dialog title="Contact Us" :visible.sync="contactUsDialogBox" >
+											<el-form :model="contactUs" label-position="top">
+												<el-form-item label="Email:" prop="email">
+													<el-input type="email" class="font-100" placeholder="Work Email" v-model="contactUs.email"></el-input>
+												</el-form-item>
+												<el-row>
+													<el-col>
+														<el-row :gutter="20">
+															<el-col :span="12">
+																<el-form-item label="First Name:" prop="fname">
+																	<el-input  placeholder="First Name" v-model="contactUs.fname"></el-input>
+																</el-form-item>
+															</el-col>
+															<el-col :span="12">
+																<el-form-item label="Last Name:" prop="lname">
+																	<el-input placeholder="Last Name" v-model="contactUs.lname"></el-input>
+																</el-form-item>
+															</el-col>
+														</el-row>
+														<el-row :gutter="20">
+															<el-col :span="12">
+																<el-form-item label="Job Title:" prop="job">
+																	<el-input  class="font-100" placeholder="Job Title" v-model="contactUs.job"></el-input>
+																</el-form-item>
+															</el-col>
+															<el-col :span="12">
+																<el-form-item label="Phone Number:" prop="contact">
+																	<el-input type="number" class="font-100" placeholder="Phone" v-model="contactUs.contact"></el-input>
+																</el-form-item>
+															</el-col>
+														</el-row>
+													</el-col>
+												</el-row>
+												<el-form-item label="Comments:">
+													<el-input type="textarea" class="font-100" placeholder="Feel free to tell us more..."
+														maxlength="300" :autosize="{ minRows: 3, maxRows: 3}" v-model="contactUs.desc">
+													</el-input>
+												</el-form-item>
+											</el-form>
+											<span slot="footer" class="dialog-footer">
+												<el-button type="primary" @click="submitForm('contactUs')" v-loading="loading" class="wt-100">Submit</el-button>
+											</span>
+										</el-dialog>
+								</el-row>
+							</el-footer>
+						</el-container>
+					</el-col>
+				</el-row>
+			</el-main>
+            <el-footer height="60px" style="margin:20px; background-color:aquamarine;" >
+				<el-row class="ht-100 wt-100">
+					<el-col :span="12" class=" ht-100 d-flex align-items-center justify-content-center">
+						<p class="section9ContactUs-bottom-footer-text">&copy; Copyright 2022-2023 <span title="Sarvoday Infotech Pvt. Ltd.">SARVODAY INFOTECH</span> All rights reserved.</p>
+					</el-col>
+					<el-col :span="12" class=" ht-100 d-flex align-items-center justify-content-center">
+						<a href="<?php echo $backwardlink; ?>end-user-agreement/" target="_blank" class="no-underline" style="margin-right: 10px;">End User Agreement</a>
+						<span class="">|</span>
+						<a href="<?php echo $backwardlink; ?>terms-of-service/" target="_blank" class="no-underline" style="margin-right: 10px; margin-left: 10px;">Terms of Service</a>
+						<span class="">|</span>
+						<a href="<?php echo $backwardlink; ?>privacy/" target="_blank" class="no-underline" style="margin-left: 10px;">Privacy Policy</a>
+					</el-col>
+				</el-row>
+			</el-footer>
+        </el-container>
+    </el-row>
+	
+	
+	<script type="text/javascript" src="js/index/index.js"></script>
+</body>
+	
+</html>
+		
